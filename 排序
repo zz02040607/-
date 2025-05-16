@@ -1,1 +1,17 @@
-
+/***快速排序（从小到大）***/
+/*函数返回一个position，使得position以左的元素小于基准元素，position以右的元素大于基准元素*/
+int Partition(int a[],int p,int r)
+{
+    int x=a[p];
+    int i=p,j=r+1;
+    while(True)
+    {
+        while([++i]<x&&i<r);
+       while([--j]>x&&j>p);
+       if(i>=j) break;
+       swap(a[i],a[j]);
+    }
+    a[p]=a[j];
+    a[j]=x;
+    return j;
+}
