@@ -15,3 +15,12 @@ int Partition(int a[],int p,int r)
     a[j]=x;
     return j;
 }
+/***对整个函数递归调用***/
+void QuickSort (int a[], int p, int r)
+{
+      if (p<r) {
+        int q=Partition(a,p,r);
+        QuickSort (a,p,q-1); //对左半段排序
+        QuickSort (a,q+1,r); //对右半段排序
+        }
+}
